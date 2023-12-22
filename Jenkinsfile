@@ -1,8 +1,8 @@
-pipipeline {
+pipeline {
     agent {
         label {
             label "built-in"
-            customWorkspace "/mnt/repo-2/"
+            customWorkspace "/mnt/repo-2"
         }
     }
     
@@ -27,4 +27,3 @@ pipipeline {
         }
     }
 }
-
