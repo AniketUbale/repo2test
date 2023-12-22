@@ -1,4 +1,3 @@
-
 pipipeline {
     agent {
         label {
