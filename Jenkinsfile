@@ -3,14 +3,14 @@ pipipeline {
     agent {
         label {
             label "built-in"
-            customWorkspace "/mnt/jenkins-wsp/"
+            customWorkspace "/mnt/repo-2/"
         }
     }
     
     stages{
         stage('delete'){
             steps{
-                sh "rm -rf /mnt/repo2test/*"
+                sh "rm -rf /mnt/repo-2/*"
             }
         }
         stage('clone'){
@@ -22,7 +22,7 @@ pipipeline {
             steps{
                 sh "yum install httpd -y"
                 sh "service httpd start"
-                sh "cp -r /mnt/repo2test/index.html /var/www/html/"
+                sh "cp -r /mnt/repo-2/index.html /var/www/html/"
                 sh "chmod -R 777 /var/www/html/index.html"
             }
         }
